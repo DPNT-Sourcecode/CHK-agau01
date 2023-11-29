@@ -40,7 +40,3 @@ public class CheckoutSolution {
         return checkout1(skus);
     }
 }
-
-
-
-
