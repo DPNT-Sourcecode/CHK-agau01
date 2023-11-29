@@ -17,6 +17,7 @@ public class CHKTest {
 
 	@Test
 	public void compute_sum() {
-		assertThat(test.checkout("ZZZX"), equalTo(58));
+		assertThat(test.checkout("ZZZXY"), equalTo(82));
 	}
 }
+
