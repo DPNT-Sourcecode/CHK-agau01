@@ -95,41 +95,57 @@ public class CheckoutSolution {
     public Integer checkout3(String skus) {
         String let = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         Map<Character, Integer> skuCount = new HashMap<>();
-        for (Character)
+        for (int i = 0; i < let.length(); i++) {
+            char sku = let.charAt(i);
+            skuCount.put(sku, 0);
+        }
 
         for (int i = 0; i < skus.length(); i++) {
             char sku = skus.charAt(i);
-
+            if (skuCount.containsKey(sku)) {
+                skuCount.put(sku, skuCount.get(sku) + 1);
+            } else {
+                return -1;
+            }
         }
 
         Integer sum = 0;
+        int num = 0;
 
         // SumA
-        sum += 200 * (numA / 5);
-        numA %= 5;
-        sum += 130 * (numA / 3);
-        sum += (numA % 3) * 50;
+        num = skuCount.get('A');
+        sum += 200 * (num / 5);
+        num %= 5;
+        sum += 130 * (num / 3);
+        sum += (num % 3) * 50;
 
         // SumE
-        sum += 40 * numE;
-        numB -= numE / 2;
+        num = skuCount.get('E');
+        sum += 40 * num;
+        int numB = skuCount.get('B');
+        numB -= num/2;
         if (numB < 0) {
             numB = 0;
         }
+        skuCount.put('B', skuCount.get('B') + 1);
 
         // SumB
+        num = skuCount.get('B');
         sum += 45 * (numB / 2);
         sum += (numB % 2) * 30;
 
         // SumC
-        sum += 20 * numC;
+        num = skuCount.get('C');
+        sum += 20 * num;
 
         // SumD
-        sum += 15 * numD;
+        num = skuCount.get('D');
+        sum += 15 * num;
 
         // SumF
-        sum += 20 * (numF / 3);
-        sum += 10 * (numF % 3);
+        num = skuCount.get('F');
+        sum += 20 * (num / 3);
+        sum += 10 * (num % 3);
 
         return sum;
     }
@@ -138,6 +154,7 @@ public class CheckoutSolution {
         return checkout3(skus);
     }
 }
+
 
 
 
