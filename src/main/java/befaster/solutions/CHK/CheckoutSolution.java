@@ -339,8 +339,8 @@ public class CheckoutSolution {
 
         // SumK
         num = skuCount.get('K');
-        sum += 150 * (num / 2);
-        sum += (num % 2) * 80;
+        sum += 120 * (num / 2);
+        sum += (num % 2) * 70;
 
         // SumL
         num = skuCount.get('L');
@@ -428,11 +428,34 @@ public class CheckoutSolution {
         num = skuCount.get('Z');
         numAll += num;
 
-        return sum;
+        sum += 45 * (numAll / 3);
+
+        numAll %= 3;
+
+        String restLen = "XSTZY";
+        for (int i = 0; i <= restLen.length(); i++) {
+
+
+            if (numAll == 0) {
+                return sum;
+            }
+        }
+
+
+    }
+
+    private Integer restSum (Map<Character, Integer> skuCount, Character c, Integer num) {
+        if (skuCount.get('Y') >= num) {
+            return num * 17;
+        } else {
+            num -= skuCount.get('X');
+            return num * skuCount.get('X');
+        }
     }
 
     public Integer checkout(String skus) {
         return checkout3(skus);
     }
 }
+
 
