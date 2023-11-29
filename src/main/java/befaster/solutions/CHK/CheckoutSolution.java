@@ -432,7 +432,7 @@ public class CheckoutSolution {
 
         numAll %= 3;
 
-        String restLen = "XSTZY";
+        String restLen = "XSTYZ";
         int[] costs = {17, 20, 20, 20, 21};
 
         for (int i = 0; i < restLen.length(); i++) {
@@ -459,4 +459,5 @@ public class CheckoutSolution {
         return checkout4(skus);
     }
 }
+
 
