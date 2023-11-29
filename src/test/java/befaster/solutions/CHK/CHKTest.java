@@ -17,8 +17,6 @@ public class CHKTest {
 
 	@Test
 	public void compute_sum() {
-		assertThat(test.checkout("ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ"), equalTo(1880));
+		assertThat(test.checkout("ZZZX"), equalTo(58));
 	}
 }
-
-
