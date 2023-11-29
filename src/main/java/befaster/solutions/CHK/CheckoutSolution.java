@@ -407,7 +407,7 @@ public class CheckoutSolution {
         num = skuCount.get('W');
         sum += num * 20;
 
-        int numAll = 0;
+        Integer numAll = 0;
         // SumS
         num = skuCount.get('S');
         numAll += num;
@@ -433,18 +433,19 @@ public class CheckoutSolution {
         numAll %= 3;
 
         String restLen = "XSTZY";
+        int[] costs = {17, 20, 20, 20, 21};
+
         for (int i = 0; i <= restLen.length(); i++) {
-
-
+            sum += restSum(skuCount, restLen.charAt(i), numAll, costs[i])
             if (numAll == 0) {
                 return sum;
             }
         }
 
-
+        return sum;
     }
 
-    private Integer restSum (Map<Character, Integer> skuCount, Character c, Integer num) {
+    private Integer restSum (Map<Character, Integer> skuCount, Character c, Integer num, int cost) {
         if (skuCount.get('Y') >= num) {
             return num * 17;
         } else {
@@ -457,5 +458,6 @@ public class CheckoutSolution {
         return checkout3(skus);
     }
 }
+
 
 
