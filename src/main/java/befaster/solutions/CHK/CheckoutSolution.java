@@ -140,7 +140,7 @@ public class CheckoutSolution {
 
         // SumD
         sum += 15 * numD;
-        
+
         // SumF
         sum += 20 * (numF / 3);
         sum += 10 * (numF % 3);
@@ -152,5 +152,6 @@ public class CheckoutSolution {
         return checkout3(skus);
     }
 }
+
 
 

@@ -17,7 +17,8 @@ public class CHKTest {
 
 	@Test
 	public void compute_sum() {
-		assertThat(test.checkout("AAAABBBCCDDEE"), equalTo(130+50+75+40+30+80-30));
+		assertThat(test.checkout("AAAABBBCCDDEEFFFFF"), equalTo(130+50+75+40+30+80-30 + 40));
 	}
 }
+
 
