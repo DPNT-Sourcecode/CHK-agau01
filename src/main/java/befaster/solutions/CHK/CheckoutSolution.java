@@ -272,8 +272,3 @@ public class CheckoutSolution {
         return checkout3(skus);
     }
 }
-
-
-
-
-
