@@ -122,17 +122,19 @@ public class CheckoutSolution {
         // SumE
         num = skuCount.get('E');
         sum += 40 * num;
-        int numB = skuCount.get('B');
-        numB -= num/2;
-        if (numB < 0) {
-            numB = 0;
+        {
+            int numB = skuCount.get('B');
+            numB -= num / 2;
+            if (numB < 0) {
+                numB = 0;
+            }
+            skuCount.put('B', numB);
         }
-        skuCount.put('B', skuCount.get('B') + 1);
 
         // SumB
         num = skuCount.get('B');
-        sum += 45 * (numB / 2);
-        sum += (numB % 2) * 30;
+        sum += 45 * (num / 2);
+        sum += (num % 2) * 30;
 
         // SumC
         num = skuCount.get('C');
@@ -147,6 +149,122 @@ public class CheckoutSolution {
         sum += 20 * (num / 3);
         sum += 10 * (num % 3);
 
+        // SumG
+        num = skuCount.get('G');
+        sum += 20 * num;
+
+        // SumH
+        num = skuCount.get('H');
+        sum += 80 * (num / 10);
+        num %= 10;
+        sum += 45 * (num / 5);
+        sum += (num % 5) * 10;
+
+        // SumI
+        num = skuCount.get('I');
+        sum += 35 * num;
+
+        // SumI
+        num = skuCount.get('J');
+        sum += 60 * num;
+
+        // SumK
+        num = skuCount.get('K');
+        sum += 150 * (num / 2);
+        sum += (num % 2) * 80;
+
+        // SumL
+        num = skuCount.get('L');
+        sum += 90 * num;
+
+        // SumN
+        num = skuCount.get('N');
+        sum += num * 40;
+        {
+            int numM = skuCount.get('M');
+            numM -= num / 3;
+            if (numM < 0) {
+                numM = 0;
+            }
+
+            skuCount.put('M', numM);
+        }
+
+        // SumM
+        num = skuCount.get('M');
+        sum += 15 * num;
+
+
+        // SumO
+        num = skuCount.get('O');
+        sum += 10 * num;
+
+        // SumP
+        num = skuCount.get('P');
+        sum += 200 * (num / 5);
+        sum += 50 * (num % 5);
+
+        // SumR
+        num = skuCount.get('R');
+        sum += num * 50;
+        {
+            int numQ = skuCount.get('Q');
+            numQ -= num / 3;
+            if (numQ < 0) {
+                numQ = 0;
+            }
+
+            skuCount.put('Q', numQ);
+        }
+
+        // SumQ
+        num = skuCount.get('Q');
+        sum += 80 * (num / 3);
+        sum += 30 * (num % 3);
+
+        // SumS
+        num = skuCount.get('S');
+        sum += 30 * num;
+
+        // SumT
+        num = skuCount.get('T');
+        sum += 20 * num;
+
+        // SumU
+        num = skuCount.get('U');
+        sum += 120 * (num / 4);
+        sum += 40 * (num % 4);
+
+        // SumV
+        num = skuCount.get('V');
+        sum += 130 * (num / 3);
+        num %= 3;
+        sum += 90 * (num / 2);
+        sum += (num % 2) * 50;
+
+        // SumW
+        num = skuCount.get('W');
+        sum += num * 20;
+
+        // SumX
+        num = skuCount.get('X');
+        sum += num * 90;
+
+        // SumY
+        num = skuCount.get('Y');
+        sum += num * 10;
+
+        // SumZ
+        num = skuCount.get('Z');
+        sum += num * 50;
+
+
+
+
+
+
+
+
         return sum;
     }
 
@@ -154,6 +272,7 @@ public class CheckoutSolution {
         return checkout3(skus);
     }
 }
+
 
 
 
