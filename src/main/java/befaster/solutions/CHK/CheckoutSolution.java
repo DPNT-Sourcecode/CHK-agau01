@@ -111,6 +111,18 @@ public class CheckoutSolution {
                 numE++;
             } else if (sku == 'F') {
                 numF++;
+            } else if (sku == 'G') {
+                numA++;
+            } else if (sku == 'H') {
+                numB++;
+            } else if (sku == 'I') {
+                numC++;
+            } else if (sku == 'J') {
+                numD++;
+            } else if (sku == 'K') {
+                numE++;
+            } else if (sku == 'L') {
+                numF++;
             } else {
                 return -1;
             }
@@ -152,3 +164,4 @@ public class CheckoutSolution {
         return checkout3(skus);
     }
 }
+
