@@ -33,7 +33,7 @@ public class CheckoutSolution {
         sum += (numA % 3) * 50;
 
         sum += 45 * (numB/2);
-        sum += (numA % 2) * 30;
+        sum += (numB % 2) * 30;
 
         sum += 20 * numC;
         sum += 15 * numD;
@@ -44,5 +44,6 @@ public class CheckoutSolution {
         return checkout1(skus);
     }
 }
+
 
 
