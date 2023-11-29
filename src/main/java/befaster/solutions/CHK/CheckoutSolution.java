@@ -27,9 +27,22 @@ public class CheckoutSolution {
                 numD++;
             }
         }
+
+        Integer sum = 0;
+        sum += 130 * (numA/3);
+        sum += (numA % 3) * 50;
+
+        sum += 45 * (numB/2);
+        sum += (numA % 2) * 30;
+
+        sum += 20 * numC;
+        sum += 15 * numD;
+
+        return sum;
     }
     public Integer checkout(String skus) {
-        throw new SolutionNotImplementedException();
+        return checkout1(skus);
     }
 }
+
 
