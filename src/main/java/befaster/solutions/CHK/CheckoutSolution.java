@@ -2,6 +2,9 @@ package befaster.solutions.CHK;
 
 import befaster.runner.SolutionNotImplementedException;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class CheckoutSolution {
     public Integer checkout1(String skus) {
         int numA = 0;
@@ -90,54 +93,13 @@ public class CheckoutSolution {
     }
 
     public Integer checkout3(String skus) {
-        int numA = 0;
-        int numB = 0;
-        int numC = 0;
-        int numD = 0;
-        int numE = 0;
-        int numF = 0;
+        String let = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        Map<Character, Integer> skuCount = new HashMap<>();
+        for (Character)
 
         for (int i = 0; i < skus.length(); i++) {
             char sku = skus.charAt(i);
-            if (sku == 'A') {
-                numA++;
-            } else if (sku == 'B') {
-                numB++;
-            } else if (sku == 'C') {
-                numC++;
-            } else if (sku == 'D') {
-                numD++;
-            } else if (sku == 'E') {
-                numE++;
-            } else if (sku == 'F') {
-                numF++;
-            } else if (sku == 'G') {
-                numA++;
-            } else if (sku == 'H') {
-                numB++;
-            } else if (sku == 'I') {
-                numC++;
-            } else if (sku == 'J') {
-                numD++;
-            } else if (sku == 'K') {
-                numE++;
-            } else if (sku == 'L') {
-                numF++;
-            } else if (sku == 'G') {
-                numA++;
-            } else if (sku == 'H') {
-                numB++;
-            } else if (sku == 'I') {
-                numC++;
-            } else if (sku == 'J') {
-                numD++;
-            } else if (sku == 'K') {
-                numE++;
-            } else if (sku == 'L') {
-                numF++;
-            } else {
-                return -1;
-            }
+
         }
 
         Integer sum = 0;
@@ -176,5 +138,6 @@ public class CheckoutSolution {
         return checkout3(skus);
     }
 }
+
 
 
