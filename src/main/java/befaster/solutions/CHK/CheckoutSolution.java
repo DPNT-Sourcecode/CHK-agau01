@@ -13,18 +13,14 @@ public class CheckoutSolution {
             char sku = skus.charAt(i);
             if (sku == 'A') {
                 numA++;
-            }
-
-            if (sku == 'B') {
+            } else if (sku == 'B') {
                 numB++;
-            }
-
-            if (sku == 'C') {
+            } else if (sku == 'C') {
                 numC++;
-            }
-
-            if (sku == 'D') {
+            } else if (sku == 'D') {
                 numD++;
+            } else {
+                return -1;
             }
         }
 
@@ -44,6 +40,7 @@ public class CheckoutSolution {
         return checkout1(skus);
     }
 }
+
 
 
 
